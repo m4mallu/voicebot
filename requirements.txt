@@ -1,0 +1,5 @@
+gTTs                # Library for text -to-speech conversion
+pydub               # Library for audio manipulation
+pyrogram            # Telegram API wrapper
+TgCrypto            # Telegram crypto library
+SpeechRecognition   # Speech to text recognition library

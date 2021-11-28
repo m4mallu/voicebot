@@ -1,0 +1,5 @@
+__pycache__
+venv
+config.py
+.idea
+voicebot.session
