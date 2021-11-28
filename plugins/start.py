@@ -5,7 +5,6 @@ from support.buttons import language_button
 
 @Client.on_message(filters.private & filters.command(['start', 'lang']))
 async def start_bot(c, m: Message):
-    await m.delete()
     await m.reply(Presets.WELCOME.format(m.from_user.first_name),
                   reply_markup=language_button,
                   disable_web_page_preview=True
