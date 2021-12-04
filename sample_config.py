@@ -19,6 +19,9 @@ class Config(object):
     # Get from my.telegram.org
     API_HASH = os.environ.get("API_HASH", "")
 
+    # Give the chat id where you want to send the logs - starting with -100
+    LOG_CHAT = int(os.environ.get("LOG_CHAT", ""))
+
 
 def LOGGER(name: str) -> logging.Logger:
     return logging.getLogger(name)

@@ -3,6 +3,7 @@ from presets import Presets
 from gtts import gTTS as Convert
 from asyncio import sleep as slp
 from pyrogram import Client, filters
+from support.service import t2aService
 from support.buttons import lang4voice_button
 from pyrogram.types import CallbackQuery, Message
 
@@ -30,6 +31,7 @@ async def english_voice(c, cb: CallbackQuery):
     await slp(1)
     await cb.message.delete()
     await cb.message.reply_voice(voice=title + '.mp3', caption=Presets.VOICE_CAPTION)
+    await t2aService(c, cb)
     try:
         os.remove(title + '.mp3')
     except Exception:
@@ -50,6 +52,7 @@ async def english_IN_voice(c, cb: CallbackQuery):
     await slp(1)
     await cb.message.reply_voice(voice=title + '.mp3', caption=Presets.VOICE_CAPTION)
     await cb.message.delete()
+    await t2aService(c, cb)
     try:
         os.remove(title + '.mp3')
     except Exception:
@@ -70,6 +73,7 @@ async def french_voice(c, cb: CallbackQuery):
     await slp(1)
     await cb.message.reply_voice(voice=title + '.mp3', caption=Presets.VOICE_CAPTION)
     await cb.message.delete()
+    await t2aService(c, cb)
     try:
         os.remove(title + '.mp3')
     except Exception:
@@ -90,6 +94,7 @@ async def chinese_voice(c, cb: CallbackQuery):
     await slp(1)
     await cb.message.reply_voice(voice=title + '.mp3', caption=Presets.VOICE_CAPTION)
     await cb.message.delete()
+    await t2aService(c, cb)
     try:
         os.remove(title + '.mp3')
     except Exception:
@@ -110,6 +115,7 @@ async def portuguese_voice(c, cb: CallbackQuery):
     await slp(1)
     await cb.message.reply_voice(voice=title + '.mp3', caption=Presets.VOICE_CAPTION)
     await cb.message.delete()
+    await t2aService(c, cb)
     try:
         os.remove(title + '.mp3')
     except Exception:
@@ -129,6 +135,7 @@ async def spanish_voice(c, cb: CallbackQuery):
     await slp(1)
     await cb.message.reply_voice(voice=title + '.mp3', caption=Presets.VOICE_CAPTION)
     await cb.message.delete()
+    await t2aService(c, cb)
     try:
         os.remove(title + '.mp3')
     except Exception:

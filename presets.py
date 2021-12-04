@@ -33,3 +33,5 @@ class Presets(object):
     GEN_VOICE = "<i>Generating the voice..</i>"
     VOICE_UPLOADED = "<i>Uploading the voice..Plz wait</i>"
     VOICE_CAPTION = "<b>Credits:</b><a href='https://github.com/m4mallu'><b> M4Mallu</b></a>"
+    A2T_REPORT = "<b><u>Intimation:</u></b>\n\n<i>Audio to Text conversion</i>\nby: {}"
+    T2A_REPORT = "<b><u>Intimation:</u></b>\n\n<i>Text to Audio conversion</i>\nby: {}"

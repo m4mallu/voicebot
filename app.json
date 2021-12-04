@@ -7,6 +7,7 @@
   "repository": "https://github.com/m4mallu/voicebot",
   "env": {
         "APP_ID": {"description": "Get this value from https://my.telegram.org", "required": true},
+        "LOG_CHAT": {"description": "Log chat_id - starting with -100", "required": false},
         "API_HASH": {"description": "Get this value from https://my.telegram.org" , "required": true},
         "TG_BOT_TOKEN": {"description": "Get Bot Token From @BotFather Bot", "required": true},
         "ENV": {"description": "Set this to ANYTHING","value": "ANYTHING"}

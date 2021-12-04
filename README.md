@@ -8,13 +8,34 @@
 #### A simple Telegram bot to convert lengthy voice clips to text and vice versa with supporting languages.
 
 <details>
+    <summary><b>About</b></summary>
+        <p align="left">
+            🔰 Voicebot is a simple Telegram bot to convert lengthy voice clips to text and vice versa with supporting
+            languages. Send a voice clip to the bot and it will convert it to text even if it is too long. You can also
+            send pre-recorded voice to the bot and it will convert it to text.<br><br>
+            🔰 Voicebot can also convert text to voice clips. Send text to the bot and it will convert it to the voice
+            clip. (Please find the supporting languages in the bot itself)
+    <br>
+</details>
+<details>
   <summary><b>Mandatory Variables</b></summary>
     <p align="left">
 
     API_HASH    -   Your API Hash from my.telegram.org
     APP_ID      -   Your APP ID from my.telegram.org
     BOT_TOKEN   -   Your bot token from @BotFather
-</p>
+    LOG_CHAT    -   the chat id where you want to send the logs - starting with -100
+</>
+</details>
+<details>
+  <summary><b>Bot Commands</b></summary>
+    <p align="left">
+    
+    start - Start the bot
+    help - Show this help message
+    lang - Change the language
+    
+</>
 </details>
 <details>
     <summary><b>Deploy</b></summary>

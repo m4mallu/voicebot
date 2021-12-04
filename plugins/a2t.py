@@ -7,9 +7,10 @@ from asyncio import sleep as slp
 from pydub.utils import mediainfo
 from pyrogram.types import Message
 from pydub.utils import make_chunks
+from plugins.cb import language_key
 from pyrogram import Client, filters
 from pyrogram.errors import FloodWait
-from plugins.cb import language_key
+from support.service import a2tService
 from support.buttons import change_language, close_button
 
 
@@ -117,7 +118,7 @@ async def aud2txt(c, m: Message):
                     except FloodWait as e:
                         await slp(e.x)
                     await slp(0.5)
-
+                await a2tService(c, m)
     else:
         with sr.AudioFile(audio_file) as source:
             recorded_audio = recognizer.listen(source)
@@ -131,6 +132,7 @@ async def aud2txt(c, m: Message):
                        reply_markup=change_language,
                        disable_web_page_preview=True
                        )
+        await a2tService(c, m)
     #
     try:
         shutil.rmtree(download_path)
